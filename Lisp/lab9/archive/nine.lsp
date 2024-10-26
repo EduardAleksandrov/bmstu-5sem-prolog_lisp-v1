@@ -42,3 +42,13 @@
 ; => 11
 
 
+(defun n-ary-to-decimal (n-ary base)
+  (reduce (lambda (acc digit)
+            (+ (* acc base) digit))
+          n-ary
+          :initial-value 0))
+
+;; Example usage:
+(print (n-ary-to-decimal '(1 0 1) 2) )
+
+
