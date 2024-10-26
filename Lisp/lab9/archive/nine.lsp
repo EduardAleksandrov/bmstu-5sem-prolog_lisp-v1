@@ -17,6 +17,14 @@
 
 ; => (4 10 18)
 
+(defun vector-element-wise-product (a b)
+  (mapcar #'* a b))
+
+;; Пример использования
+(let ((vector-a '(1 2 3))
+      (vector-b '(4 5 6))) (print 
+  (vector-element-wise-product vector-a vector-b)))
+
 ; Декартово произведение
 (defun cartesian-product (list1 list2)
   (apply 'append
